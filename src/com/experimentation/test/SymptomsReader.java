@@ -14,7 +14,6 @@ public class SymptomsReader {
      *
      */
 
-
     public static List<String> symptomsReaderFile(String nomFichier) throws Exception{
 
         List<String> myliste=new ArrayList<String>();
