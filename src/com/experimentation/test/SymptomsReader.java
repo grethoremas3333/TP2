@@ -14,10 +14,10 @@ public class SymptomsReader {
      *
      */
 
-    static List<String> myliste=new ArrayList<String>();
 
-    public static void symptomsReader(String nomFichier) throws Exception{
+    public static List<String> symptomsReaderFile(String nomFichier) throws Exception{
 
+        List<String> myliste=new ArrayList<String>();
         BufferedReader reader = new BufferedReader (new FileReader(nomFichier)); //lecture du fichier symptoms.txt
         String line = reader.readLine(); //insertion du contenu du fichier symptoms.txt dans la variable line
 
@@ -28,6 +28,8 @@ public class SymptomsReader {
             line = reader.readLine();
         }
         reader.close();
+
+        return myliste;
     }
 
 }

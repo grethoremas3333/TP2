@@ -30,7 +30,8 @@ public class Main {
         //symptomsCount(myliste); //fonction/méthode qui compte le nombre d'occurence d'un élément dans la liste myliste et stocke le nom de l'élément en question + son nombre d'occurence dans la TreeMap map
         //symptomsWriter(map); //fonction/méthode qui parcous la TreeMap map et inserre les données <clé : valeur> dans un fichier result.out
 
-        symptomsReader.symptomsReader(nomFichier);
+        myliste = symptomsReader.symptomsReaderFile(nomFichier);
+        System.out.println ("la taille est de:"+myliste.size());
 
         System.out.println("...Fin du Programme !!!");
 
