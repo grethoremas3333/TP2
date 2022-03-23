@@ -19,6 +19,9 @@ public class Main {
     static TreeMap<String, Integer> map= new TreeMap<String, Integer>();
     static String nomFichier = "symptoms.txt";
 
+    /* ** */
+    static SymptomsReader symptomsReader = new SymptomsReader();
+
     public static void main(String[] args) throws Exception{
 
         System.out.println("Version:v0.1.0"  +"\n"+ "Initialisation du Programme...");
@@ -26,6 +29,8 @@ public class Main {
         //symptomsReader(nomFichier); //fonction/méthode qui lit un fichier en entrée et insert les données récupérées dans la Liste myliste
         //symptomsCount(myliste); //fonction/méthode qui compte le nombre d'occurence d'un élément dans la liste myliste et stocke le nom de l'élément en question + son nombre d'occurence dans la TreeMap map
         //symptomsWriter(map); //fonction/méthode qui parcous la TreeMap map et inserre les données <clé : valeur> dans un fichier result.out
+
+        symptomsReader.symptomsReader(nomFichier);
 
         System.out.println("...Fin du Programme !!!");
 
