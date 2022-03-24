@@ -2,6 +2,7 @@ package com.experimentation.test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.TreeMap;
 
 public class Main {
@@ -21,6 +22,7 @@ public class Main {
 
     /* ** */
     static SymptomsReader symptomsReader = new SymptomsReader();
+    static SymptomsCount symptomsCount = new SymptomsCount();
 
     public static void main(String[] args) throws Exception{
 
@@ -31,7 +33,14 @@ public class Main {
         //symptomsWriter(map); //fonction/méthode qui parcous la TreeMap map et inserre les données <clé : valeur> dans un fichier result.out
 
         myliste = symptomsReader.symptomsReaderFile(nomFichier);
-        System.out.println ("la taille est de:"+myliste.size());
+        map = symptomsCount.symptomsCount(myliste);
+
+        System.out.println ("la taille de la liste << myliste >> est de:"+myliste.size()+ "\n");
+        int nombreSymptome = 1;
+        for(Map.Entry<String, Integer> entries:map.entrySet()){
+            System.out.println(nombreSymptome+")- "+entries.getKey()+": "+entries.getValue() + "\n");
+            nombreSymptome++;
+        }
 
         System.out.println("...Fin du Programme !!!");
 
