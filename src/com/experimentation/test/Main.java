@@ -23,6 +23,7 @@ public class Main {
     /* ** */
     static SymptomsReader symptomsReader = new SymptomsReader();
     static SymptomsCount symptomsCount = new SymptomsCount();
+    static SymptomsWriter symptomsWriter = new SymptomsWriter();
 
     public static void main(String[] args) throws Exception{
 
@@ -41,6 +42,8 @@ public class Main {
             System.out.println(nombreSymptome+")- "+entries.getKey()+": "+entries.getValue() + "\n");
             nombreSymptome++;
         }
+
+        symptomsWriter.symptomsWriter(map);
 
         System.out.println("...Fin du Programme !!!");
 
