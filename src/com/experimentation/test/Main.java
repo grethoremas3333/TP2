@@ -26,17 +26,17 @@ public class Main {
      *
      */
     //static SymptomsReader symptomsReader = new SymptomsReader();
-    static SymptomsCount symptomsCount = new SymptomsCount();
+    //static SymptomsCount symptomsCount = new SymptomsCount();
     static SymptomsWriter symptomsWriter = new SymptomsWriter();
 
     /**
      *
-     * Instanciation des Classes qui implémentes les interfaces SymptomsReader
-     * SymptomsCount et SymptomsWriter
+     * Instanciation des Classes qui implémentes les interfaces SymptomReader
+     * SymptomCount et SymptomWriter
      *
      */
     static FileSymptomReader symptomReader = new FileSymptomReader();
-    //static SymptomsCount symptomsCount = new SymptomsCount();
+    static FileSymptomCount symptomCount = new FileSymptomCount();
     //static SymptomsWriter symptomsWriter = new SymptomsWriter();
 
     public static void main(String[] args) throws Exception{
@@ -44,7 +44,7 @@ public class Main {
         System.out.println("Version:v0.1.0"  +"\n"+ "Initialisation du Programme...");
 
         myliste = symptomReader.read(nomFichier);
-        map = symptomsCount.symptomsCount(myliste);
+        map = symptomCount.count(myliste);
         symptomsWriter.symptomsWriter(map);
 
         System.out.println("...Fin du Programme !!!");
