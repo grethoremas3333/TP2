@@ -2,7 +2,6 @@ package com.experimentation.test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.TreeMap;
 
 public class Main {
@@ -26,15 +25,25 @@ public class Main {
      * SymptomsCount et SymptomsWriter
      *
      */
-    static SymptomsReader symptomsReader = new SymptomsReader();
+    //static SymptomsReader symptomsReader = new SymptomsReader();
     static SymptomsCount symptomsCount = new SymptomsCount();
     static SymptomsWriter symptomsWriter = new SymptomsWriter();
+
+    /**
+     *
+     * Instanciation des Classes qui implémentes les interfaces SymptomsReader
+     * SymptomsCount et SymptomsWriter
+     *
+     */
+    static FileSymptomReader symptomReader = new FileSymptomReader();
+    //static SymptomsCount symptomsCount = new SymptomsCount();
+    //static SymptomsWriter symptomsWriter = new SymptomsWriter();
 
     public static void main(String[] args) throws Exception{
 
         System.out.println("Version:v0.1.0"  +"\n"+ "Initialisation du Programme...");
 
-        myliste = symptomsReader.symptomsReaderFile(nomFichier);
+        myliste = symptomReader.read(nomFichier);
         map = symptomsCount.symptomsCount(myliste);
         symptomsWriter.symptomsWriter(map);
 
