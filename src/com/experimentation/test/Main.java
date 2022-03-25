@@ -19,15 +19,6 @@ public class Main {
     static TreeMap<String, Integer> map= new TreeMap<String, Integer>();
     static String nomFichier = "symptoms.txt";
 
-    /**
-     *
-     * Instanciation des Classes SymptomsReader
-     * SymptomsCount et SymptomsWriter
-     *
-     */
-    //static SymptomsReader symptomsReader = new SymptomsReader();
-    //static SymptomsCount symptomsCount = new SymptomsCount();
-    static SymptomsWriter symptomsWriter = new SymptomsWriter();
 
     /**
      *
@@ -37,18 +28,19 @@ public class Main {
      */
     static FileSymptomReader symptomReader = new FileSymptomReader();
     static FileSymptomCount symptomCount = new FileSymptomCount();
-    //static SymptomsWriter symptomsWriter = new SymptomsWriter();
+    static FileSymptomWriter symptomWriter = new FileSymptomWriter();
 
+    /* *Début du Programme!!!* */
     public static void main(String[] args) throws Exception{
 
         System.out.println("Version:v0.1.0"  +"\n"+ "Initialisation du Programme...");
 
         myliste = symptomReader.read(nomFichier);
         map = symptomCount.count(myliste);
-        symptomsWriter.symptomsWriter(map);
+        symptomWriter.writer(map);
 
         System.out.println("...Fin du Programme !!!");
 
     }
-
+    /* *Fin du Programme!!!* */
 }
