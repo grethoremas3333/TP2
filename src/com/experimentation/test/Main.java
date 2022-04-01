@@ -26,9 +26,9 @@ public class Main {
      * SymptomCount et SymptomWriter
      *
      */
-    static FileSymptomReader symptomReader = new FileSymptomReader();
-    static FileSymptomCount symptomCount = new FileSymptomCount();
-    static FileSymptomWriter symptomWriter = new FileSymptomWriter();
+    static SymptomReader symptomReader = new FileSymptomReader();
+    static SymptomCount symptomCount = new FileSymptomCount();
+    static SymptomWriter symptomWriter = new FileSymptomWriter();
 
     /* *Début du Programme!!!* */
     public static void main(String[] args) throws Exception{
